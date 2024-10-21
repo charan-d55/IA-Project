@@ -1,6 +1,5 @@
 from django.db import models
 # Create your models here.
-
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
@@ -21,7 +20,7 @@ class Item(models.Model):
     available = models.BooleanField(default=True)
     description = models.TextField(null=True, blank=True)  # New field
 
-    def __str__(self):
+    def __str__(self)::
         return self.name
 
 # Extended Client model inheriting from Django's User model
